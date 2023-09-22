@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: C:/Users/Keno/Desktop/Informatik Studium/2023_WS/Effiziente Programmierung in C++/EPC_string_template/out/build/x64-Debug/_deps/googletest-src/googlemock
-# Build directory: C:/Users/Keno/Desktop/Informatik Studium/2023_WS/Effiziente Programmierung in C++/EPC_string_template/out/build/x64-Debug/_deps/googletest-build/googlemock
+# Source directory: C:/Users/star0/source/repos/EPC_own_string_class/out/build/x64-Debug/_deps/googletest-src/googlemock
+# Build directory: C:/Users/star0/source/repos/EPC_own_string_class/out/build/x64-Debug/_deps/googletest-build/googlemock
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

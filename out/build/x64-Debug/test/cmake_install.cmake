@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Keno/Desktop/Informatik Studium/2023_WS/Effiziente Programmierung in C++/EPC_string_template/test
+# Install script for directory: C:/Users/star0/source/repos/EPC_own_string_class/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/Keno/Desktop/Informatik Studium/2023_WS/Effiziente Programmierung in C++/EPC_string_template/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/star0/Source/Repos/EPC_own_string_class/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,6 +34,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Keno/Desktop/Informatik Studium/2023_WS/Effiziente Programmierung in C++/EPC_string_template/out/build/x64-Debug/_deps/googletest-build/cmake_install.cmake")
+  include("C:/Users/star0/source/repos/EPC_own_string_class/out/build/x64-Debug/_deps/googletest-build/cmake_install.cmake")
 endif()
 
