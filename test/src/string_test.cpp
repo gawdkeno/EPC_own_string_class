@@ -10,6 +10,13 @@ using namespace technikum;
 //   EXPECT_TRUE(true);
 // }
 
+TEST(c_strNullTest, CheckValues)
+{
+  technikum::string newStr = technikum::string();
+  ASSERT_STREQ(newStr.c_str(), nullptr);
+  EXPECT_TRUE(true);
+}
+
 TEST(c_strSmallTest, CheckValues)
 {
   const char* initial = "hello";
@@ -31,6 +38,14 @@ TEST(c_strSpecialCharTest, CheckValues)
   const char* initial = "hello%&/=)(!§";
   technikum::string newStr = technikum::string(initial);
   ASSERT_STREQ(newStr.c_str(), initial);
+  EXPECT_TRUE(true);
+}
+
+TEST(sizeNoneTest, CheckValues)
+{
+  technikum::string newStr = technikum::string();
+  int test = newStr.size();
+  ASSERT_EQ(test, 0);
   EXPECT_TRUE(true);
 }
 
