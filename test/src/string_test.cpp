@@ -10,6 +10,43 @@ using namespace technikum;
 //   EXPECT_TRUE(true);
 // }
 
+TEST(CopyConstTest, CheckValues)
+{
+  const char* initial = "hello";
+  technikum::string newStr = technikum::string(initial);
+  technikum::string testStr(newStr);
+  ASSERT_STREQ(testStr.c_str(), initial);
+  EXPECT_TRUE(true);
+}
+
+TEST(CopyAssignTest, CheckValues)
+{
+  const char* initial = "hello";
+  technikum::string newStr = technikum::string(initial);
+  technikum::string testStr;
+  testStr = newStr;
+  ASSERT_STREQ(testStr.c_str(), initial);
+  EXPECT_TRUE(true);
+}
+
+TEST(MoveConstTest, CheckValues)
+{
+  const char* initial = "hello";
+  technikum::string newStr = std::move(technikum::string(initial));
+  ASSERT_STREQ(newStr.c_str(), initial);
+  EXPECT_TRUE(true);
+}
+
+TEST(MoveAssignTest, CheckValues)
+{
+  const char* initial = "hello";
+  technikum::string newStr = technikum::string(initial);
+  technikum::string testStr;
+  testStr = std::move(newStr);
+  ASSERT_STREQ(testStr.c_str(), initial);
+  EXPECT_TRUE(true);
+}
+
 TEST(c_strNullTest, CheckValues)
 {
   technikum::string newStr = technikum::string();

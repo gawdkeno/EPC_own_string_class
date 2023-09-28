@@ -7,6 +7,11 @@ namespace technikum
    public:
     string();
     string(const char* str);
+    string(const string& other);
+    string operator=(const string& other);
+
+    string(string&& other);
+    string operator=(string&& other);
 
     ~string();
 
