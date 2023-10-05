@@ -13,9 +13,17 @@ namespace technikum
 
   string::string(const char* str)
   {
-    len = my_strlen(str);
-    data = new char[len + 1];
-    my_strcpy(data, len + 1, str);
+    if (str == nullptr)
+    {
+      len = 0;
+      data = nullptr;
+    }
+    else
+    {
+      len = my_strlen(str);
+      data = new char[len + 1];
+      my_strcpy(data, len + 1, str);
+    }
   }
 
   string::~string()
@@ -25,12 +33,18 @@ namespace technikum
 
   string::string(const string& other)
   {
+    if (other.data == nullptr)
+    {
+      len = 0;
+      data = nullptr;
+      return;
+    }
     len = other.len;
     data = new char[len + 1];
     my_strcpy(data, len + 1, other.data);
   }
 
-  string string::operator=(const string& other)
+  string& string::operator=(const string& other)
   {
     if (data)
     {
@@ -43,7 +57,7 @@ namespace technikum
     return *this;
   }
 
-  string::string(string&& other) 
+  string::string(string&& other) noexcept
   {
     len = other.len;
     data = other.data;
@@ -51,9 +65,10 @@ namespace technikum
     other.data = nullptr;
   }
 
-  string string::operator=(string&& other) 
+  string& string::operator=(string&& other) noexcept
   {
-    if (data)
+    /*if (this == &other) */
+    if (data) 
     {
       delete[] data;
     }
@@ -65,10 +80,11 @@ namespace technikum
     return *this;
   }
 
-  size_t string::my_strlen(const char* str) const
+  size_t string::my_strlen(const char* str)
   {
     size_t length = 0;
-    while (str[length] != '\0' && length < MAX_ITERATIONS)
+
+    while (str[length] != '\0' && length < MAX_ITERATIONS) 
     {
       length++;
     }
@@ -85,7 +101,7 @@ namespace technikum
 
     if (srcLen >= destSize)
     {
-      // Handle overflow error
+      // handle overflow error
       return;
     }
 
@@ -102,7 +118,7 @@ namespace technikum
 
     if (destLen + srcLen >= destSize)
     {
-      // Handle overflow error
+      // handle overflow error
       return;
     }
 

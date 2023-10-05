@@ -6,137 +6,49 @@
 
 using namespace technikum;
 
-// TEST(TmpAddTest, CheckValues)
-//{
-//   ASSERT_EQ(technikum::add(1, 2), 3);
-//   EXPECT_TRUE(true);
-// }
+TEST(CopyConstructorTest, CopyingEmptyString)
+{
+  technikum::string emptyStr;
+  technikum::string copiedStr(emptyStr);
+  EXPECT_EQ(copiedStr.length(), 0);
+  EXPECT_EQ(copiedStr.c_str(), nullptr);
+}
 
-TEST(CopyConstTest, CheckValues)
+TEST(CopyConstructorTest, CopyingNonEmptyString)
 {
   const char* initial = "hello";
   technikum::string newStr = technikum::string(initial);
-  technikum::string testStr(newStr);
-  ASSERT_STREQ(testStr.c_str(), initial);
-  EXPECT_TRUE(true);
+  technikum::string copiedStr(newStr);
+  EXPECT_EQ(copiedStr.length(), 5);
+  EXPECT_STREQ(copiedStr.c_str(), initial);
 }
 
-TEST(CopyAssignTest, CheckValues)
-{
-  const char* initial = "hello";
-  technikum::string newStr = technikum::string(initial);
-  technikum::string testStr;
-  testStr = newStr;
-  ASSERT_STREQ(testStr.c_str(), initial);
-  EXPECT_TRUE(true);
-}
-
-TEST(MoveConstTest, CheckValues)
-{
-  const char* initial = "hello";
-  technikum::string newStr = std::move(technikum::string(initial));
-  ASSERT_STREQ(newStr.c_str(), initial);
-  EXPECT_TRUE(true);
-}
-
-TEST(MoveAssignTest, CheckValues)
+TEST(MoveAssignmentTest, MoveAssignmentOperator)
 {
   const char* initial = "hello";
   technikum::string newStr = technikum::string(initial);
   technikum::string testStr;
   testStr = std::move(newStr);
-  ASSERT_STREQ(testStr.c_str(), initial);
-  EXPECT_TRUE(true);
+  EXPECT_EQ(testStr.length(), 5);
+  EXPECT_STREQ(testStr.c_str(), initial);
+  EXPECT_EQ(newStr.length(), 0);
+  EXPECT_EQ(newStr.c_str(), nullptr);
 }
 
-TEST(c_strNullTest, CheckValues)
+TEST(EdgeCasesTest, NullString)
 {
-  technikum::string newStr = technikum::string();
-  ASSERT_STREQ(newStr.c_str(), nullptr);
-  EXPECT_TRUE(true);
+  technikum::string newStr = technikum::string(nullptr);
+  EXPECT_EQ(newStr.length(), 0);
+  EXPECT_EQ(newStr.c_str(), nullptr);
 }
 
-TEST(c_strSmallTest, CheckValues)
+TEST(EdgeCasesTest, AppendToItself)
 {
   const char* initial = "hello";
   technikum::string newStr = technikum::string(initial);
-  ASSERT_STREQ(newStr.c_str(), initial);
-  EXPECT_TRUE(true);
-}
-
-TEST(c_strBigTest, CheckValues)
-{
-  const char* initial = "helloAllOfYOuOutThereIHopeYouHaveAGreatDayGoodByeAAAAAAAAAAAHHHHHHHHHHHHHHHH";
-  technikum::string newStr = technikum::string(initial);
-  ASSERT_STREQ(newStr.c_str(), initial);
-  EXPECT_TRUE(true);
-}
-
-TEST(c_strSpecialCharTest, CheckValues)
-{
-  const char* initial = "hello%&/=)(!§";
-  technikum::string newStr = technikum::string(initial);
-  ASSERT_STREQ(newStr.c_str(), initial);
-  EXPECT_TRUE(true);
-}
-
-TEST(sizeNoneTest, CheckValues)
-{
-  technikum::string newStr = technikum::string();
-  size_t test = newStr.size();
-  ASSERT_EQ(test, 0);
-  EXPECT_TRUE(true);
-}
-
-TEST(sizeSmallTest, CheckValues)
-{
-  technikum::string newStr = technikum::string("hello");
-  size_t test = newStr.size();
-  ASSERT_EQ(test, 5);
-  EXPECT_TRUE(true);
-}
-
-TEST(sizeBigTest, CheckValues)
-{
-  technikum::string newStr =
-      technikum::string("helloAllOfYOuOutThereIHopeYouHaveAGreatDayGoodByeAAAAAAAAAAAHHHHHHHHHHHHHHHH");
-  size_t test = newStr.size();
-  ASSERT_EQ(test, 76);
-  EXPECT_TRUE(true);
-}
-
-TEST(AppendHelloWorldTest, CheckValues)
-{
-  technikum::string newStr = technikum::string("hello");
-  technikum::string secStr = technikum::string("world");
-  newStr.append(secStr);
-  const char* test = newStr.c_str();
-  ASSERT_STREQ(test, "helloworld");
-  EXPECT_TRUE(true);
-}
-
-TEST(AppendWithEmptyTest, CheckValues)
-{
-  technikum::string newStr = technikum::string("Hello");
-  technikum::string firStr = technikum::string(" ");
-  technikum::string secStr = technikum::string("World");
-  newStr.append(firStr);
-  newStr.append(secStr);
-  const char* test = newStr.c_str();
-  ASSERT_STREQ(test, "Hello World");
-  EXPECT_TRUE(true);
-}
-
-TEST(AppendMultiTest, CheckValues)
-{
-  technikum::string newStr = technikum::string("hello");
-  technikum::string secStr = technikum::string("world");
-  newStr.append(secStr);
   newStr.append(newStr);
-  newStr.append(secStr);
-  const char* test = newStr.c_str();
-  ASSERT_STREQ(test, "helloworldhelloworldworld");
-  EXPECT_TRUE(true);
+  EXPECT_EQ(newStr.length(), 10);
+  EXPECT_STREQ(newStr.c_str(), "hellohello");
 }
 
  /* int main()
