@@ -32,8 +32,10 @@ TEST(CopyAssignTest, CheckValues)
 TEST(MoveConstTest, CheckValues)
 {
   const char* initial = "hello";
+  //technikum::string testStr = technikum::string(initial);
   technikum::string newStr = std::move(technikum::string(initial));
   ASSERT_STREQ(newStr.c_str(), initial);
+  //ASSERT_EQ(testStr, nullptr);
   EXPECT_TRUE(true);
 }
 
@@ -44,6 +46,7 @@ TEST(MoveAssignTest, CheckValues)
   technikum::string testStr;
   testStr = std::move(newStr);
   ASSERT_STREQ(testStr.c_str(), initial);
+  //ASSERT_EQ(newStr, nullptr);
   EXPECT_TRUE(true);
 }
 
