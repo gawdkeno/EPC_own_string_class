@@ -1,9 +1,16 @@
 # ninja log v5
 10118	11165	7169898985084534	lib/gmock_main.lib	41a6c3436b0e1307
+<<<<<<< HEAD
 17	215	7179503676377923	CMakeFiles/string.dir/src/string.cpp.obj	3d1ee006a9f5e54e
 217	500	7179503679057929	lib/Debug/string.lib	5cae26556a730007
 55	10477	7169898978874540	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.obj	4c76fb1fe64ff2f3
 33	2211	7179503696318233	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	7419f1b8ffef1a6e
+=======
+19	977	7170353504279654	CMakeFiles/string.dir/src/string.cpp.obj	3d1ee006a9f5e54e
+979	1318	7170353507679626	lib/Debug/string.lib	5cae26556a730007
+55	10477	7169898978874540	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.obj	4c76fb1fe64ff2f3
+41	3198	7170353526580272	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	7419f1b8ffef1a6e
+>>>>>>> 3ab06cefa7bac95b4f85ef1c876f49ff78cb18d9
 83	7083	7169898944744563	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj	1fc781270ff591fc
 142	7490	7169898949054531	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.obj	7c05908a298c7320
 3371	8472	7169898959344567	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj	25b208f4503b6bac
@@ -13,6 +20,7 @@
 6407	13854	7169899013258656	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	635a941f9314f507
 13854	14094	7169899015337210	lib/gtest.lib	b84f56db58e20cdf
 14094	14279	7169899017487205	lib/gtest_main.lib	7c3ef7325e19b7e4
+<<<<<<< HEAD
 2213	3277	7179503704843505	test/string_test_Tests.exe	c1e673476d70a5bf
 40	912	7179504180815298	CMakeFiles/string.dir/src/string.cpp.obj	3d1ee006a9f5e54e
 914	1271	7179504184455313	lib/Debug/string.lib	5cae26556a730007
@@ -69,3 +77,28 @@
 2688	5741	7182930732420108	lib/Debug/string.lib	5cae26556a730007
 181	10105	7182930778960009	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	7419f1b8ffef1a6e
 10177	12426	7182930799860019	test/string_test_Tests.exe	c1e673476d70a5bf
+=======
+3198	3992	7170353532710291	test/string_test_Tests.exe	c1e673476d70a5bf
+9	125	7170781491766749	CMakeFiles/string.dir/src/string.cpp.obj	7993fe810945ee23
+126	207	7170781492501478	lib/Debug/string.lib	6a6d2614a005a4d4
+52	810	7170781498619482	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	5506b2bffb316c21
+25	1037	7170781500847973	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	90791f7e49f70bfd
+40	1694	7170781507406532	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	a36270e07f30efb1
+1695	1906	7170781508384799	lib/gtest.lib	313863207d33669
+1906	1990	7170781510348742	lib/gtest_main.lib	94a99c7549edb0f8
+1991	2288	7170781512501198	test/string_test_Tests.exe	ae1f944903cc069b
+9	869	7170781760742601	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	90791f7e49f70bfd
+870	1239	7170781763539469	test/string_test_Tests.exe	ae1f944903cc069b
+9	838	7170784044111616	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	90791f7e49f70bfd
+839	1200	7170784046947631	test/string_test_Tests.exe	ae1f944903cc069b
+8	923	7170784748843919	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	90791f7e49f70bfd
+924	1198	7170784750976662	test/string_test_Tests.exe	ae1f944903cc069b
+8	828	7170785649603237	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	90791f7e49f70bfd
+829	1168	7170785652092587	test/string_test_Tests.exe	ae1f944903cc069b
+9	954	7170785890715333	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	90791f7e49f70bfd
+955	1192	7170785892491694	test/string_test_Tests.exe	ae1f944903cc069b
+12	1450	7170786108641018	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	90791f7e49f70bfd
+1452	2068	7170786113272819	test/string_test_Tests.exe	ae1f944903cc069b
+17	1768	7170787806402956	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	90791f7e49f70bfd
+1770	2484	7170787812266399	test/string_test_Tests.exe	ae1f944903cc069b
+>>>>>>> 3ab06cefa7bac95b4f85ef1c876f49ff78cb18d9

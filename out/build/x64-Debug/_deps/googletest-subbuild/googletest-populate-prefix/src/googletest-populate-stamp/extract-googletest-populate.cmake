@@ -5,8 +5,8 @@ cmake_minimum_required(VERSION 3.5)
 
 # Make file names absolute:
 #
-get_filename_component(filename "C:/Users/Keno/Desktop/Informatik Studium/2023_WS/Effiziente Programmierung in C++/EPC_string_template/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/03597a01ee50ed33e9dfd640b249b4be3799d395.zip" ABSOLUTE)
-get_filename_component(directory "C:/Users/Keno/Desktop/Informatik Studium/2023_WS/Effiziente Programmierung in C++/EPC_string_template/out/build/x64-Debug/_deps/googletest-src" ABSOLUTE)
+get_filename_component(filename "C:/Users/star0/source/repos/EPC_own_string_class/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/03597a01ee50ed33e9dfd640b249b4be3799d395.zip" ABSOLUTE)
+get_filename_component(directory "C:/Users/star0/source/repos/EPC_own_string_class/out/build/x64-Debug/_deps/googletest-src" ABSOLUTE)
 
 message(STATUS "extracting...
      src='${filename}'
