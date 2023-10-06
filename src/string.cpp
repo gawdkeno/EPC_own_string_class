@@ -68,7 +68,7 @@ namespace technikum
   string& string::operator=(string&& other) noexcept
   {
     /*if (this == &other) */
-    if (data) 
+    if (data)
     {
       delete[] data;
     }
@@ -80,11 +80,59 @@ namespace technikum
     return *this;
   }
 
+  string string::operator+(const string& other)
+  {
+    size_t newLen = len + other.len;
+    char* newData = new char[newLen + 1];
+    my_strcpy(newData, newLen + 1, data);
+    my_strcat(newData, newLen + 1, other.data);
+
+    return string(newData);
+  }
+
+  string& string::operator+=(const string& other)
+  {
+    size_t newLen = len + other.len;
+    char* newData = new char[newLen + 1];
+    my_strcpy(newData, newLen + 1, data);
+    my_strcat(newData, newLen + 1, other.data);
+
+    delete[] data;
+    data = newData;
+    len = newLen;
+
+    return *this;
+  }
+
+  string string::operator+(const char* other)
+  {
+    size_t newLen = len + my_strlen(other);
+    char* newData = new char[newLen + 1];
+    my_strcpy(newData, newLen + 1, data);
+    my_strcat(newData, newLen + 1, other);
+
+    return string(newData);
+  }
+
+  string& string::operator+=(const char* other)
+  {
+    size_t newLen = len + my_strlen(other);
+    char* newData = new char[newLen + 1];
+    my_strcpy(newData, newLen + 1, data);
+    my_strcat(newData, newLen + 1, other);
+
+    delete[] data;
+    data = newData;
+    len = newLen;
+
+    return *this;
+  }
+
   size_t string::my_strlen(const char* str)
   {
     size_t length = 0;
 
-    while (str[length] != '\0' && length < MAX_ITERATIONS) 
+    while (str[length] != '\0' && length < MAX_ITERATIONS)
     {
       length++;
     }

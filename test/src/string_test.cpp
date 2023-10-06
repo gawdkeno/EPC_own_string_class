@@ -35,6 +35,33 @@ TEST(MoveAssignmentTest, MoveAssignmentOperator)
   EXPECT_EQ(newStr.c_str(), nullptr);
 }
 
+TEST(OperatorTest, Addition)
+{
+  const char* initial = "hello";
+  technikum::string newStr = technikum::string(initial);
+  technikum::string CharStr;
+  technikum::string StringStr;
+  CharStr = newStr + "hello";
+  StringStr = newStr + newStr;
+  EXPECT_EQ(CharStr.length(), 10);
+  EXPECT_STREQ(CharStr.c_str(), "hellohello");
+  EXPECT_EQ(StringStr.length(), 10);
+  EXPECT_STREQ(StringStr.c_str(), "hellohello");
+}
+
+TEST(OperatorTest, AppendOperator)
+{
+  const char* initial = "hello";
+  technikum::string CharStr = technikum::string(initial);
+  technikum::string StringStr = technikum::string(initial);
+  StringStr += StringStr;
+  CharStr += "hello";
+  EXPECT_EQ(CharStr.length(), 10);
+  EXPECT_STREQ(CharStr.c_str(), "hellohello");
+  EXPECT_EQ(StringStr.length(), 10);
+  EXPECT_STREQ(StringStr.c_str(), "hellohello");
+}
+
 TEST(EdgeCasesTest, NullString)
 {
   technikum::string newStr = technikum::string(nullptr);
@@ -51,26 +78,26 @@ TEST(EdgeCasesTest, AppendToItself)
   EXPECT_STREQ(newStr.c_str(), "hellohello");
 }
 
- /* int main()
+/* int main()
 {
-  string str1("Hello");
-  string str2(" World");
-  string str3(" my friend");
+ string str1("Hello");
+ string str2(" World");
+ string str3(" my friend");
 
-  str1.append(str2);
-  str1.append(str3);
+ str1.append(str2);
+ str1.append(str3);
 
-  const char* result = str1.c_str();
-  size_t length = str1.length();
+ const char* result = str1.c_str();
+ size_t length = str1.length();
 
-  std::cout << "String: " << result << std::endl;
-  std::cout << "Length: " << length << std::endl;
+ std::cout << "String: " << result << std::endl;
+ std::cout << "Length: " << length << std::endl;
 
-  technikum::string newStr = technikum::string(str3);
+ technikum::string newStr = technikum::string(str3);
 
-  std::cout << "String: " << newStr.c_str() << std::endl;
+ std::cout << "String: " << newStr.c_str() << std::endl;
 
-  return 0;
+ return 0;
 } */
 
 /* int main(int argc, char **argv)
