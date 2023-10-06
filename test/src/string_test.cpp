@@ -1,7 +1,5 @@
 #include "technikumSTL/string.h"
-
 #include <gtest/gtest.h>
-
 #include <iostream>
 
 using namespace technikum;

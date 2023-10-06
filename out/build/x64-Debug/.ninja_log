@@ -44,3 +44,9 @@
 796	1223	7182973654199474	lib/Debug/string.lib	5cae26556a730007
 31	3052	7182973673350589	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	7419f1b8ffef1a6e
 3055	4053	7182973681831065	test/string_test_Tests.exe	c1e673476d70a5bf
+42	953	7182983987986233	CMakeFiles/string.dir/src/string.cpp.obj	3d1ee006a9f5e54e
+968	1480	7182983993216452	lib/Debug/string.lib	5cae26556a730007
+62	3125	7182984010447167	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	7419f1b8ffef1a6e
+3127	3906	7182984016857417	test/string_test_Tests.exe	c1e673476d70a5bf
+43	2308	7182985019110995	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	7419f1b8ffef1a6e
+2313	3063	7182985025511253	test/string_test_Tests.exe	c1e673476d70a5bf
