@@ -6,19 +6,31 @@ namespace technikum
   {
    public:
     string();
+    ~string();
+
     string(const char* str);
 
-    ~string();
+    string(const string& other);
+    string& operator=(const string& other);
+    string(string&& other) noexcept;
+    string& operator=(string&& other) noexcept;
+    string operator+(const string& other);
+    string& operator+=(const string& other);
+    string operator+(const char* other);
+    string& operator+=(const char* other);
 
     void append(const string& other);
 
     const char* c_str() const;
 
-    int length() const;
-    int size() const;
+    size_t length() const;
+    size_t size() const;
 
    private:
+    static size_t my_strlen(const char* str);
+    static void my_strcpy(char* dest, size_t destSize, const char* src);
+    static void my_strcat(char* dest, size_t destSize, const char* src);
     char* data;
-    int len;
+    size_t len;
   };
 }  // namespace technikum
