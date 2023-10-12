@@ -1,5 +1,7 @@
 #include "technikumSTL/string.h"
+
 #include <gtest/gtest.h>
+
 #include <iostream>
 
 using namespace technikum;
@@ -76,31 +78,19 @@ TEST(EdgeCasesTest, AppendToItself)
   EXPECT_STREQ(newStr.c_str(), "hellohello");
 }
 
-/* int main()
+ int main()
 {
- string str1("Hello");
- string str2(" World");
- string str3(" my friend");
+  const string test("Hello World");
 
- str1.append(str2);
- str1.append(str3);
+  std::cout << "First: ";
+  for (string::ConstIterator it = test.begin(); it != test.end(); ++it)
+  {
+    std::cout << *it;
+  }
 
- const char* result = str1.c_str();
- size_t length = str1.length();
+  std::cout << "\n";
 
- std::cout << "String: " << result << std::endl;
- std::cout << "Length: " << length << std::endl;
+  std::cout << "SECOND: " << (std::find(test.begin(), test.end(), 'Z') != test.end());
 
- technikum::string newStr = technikum::string(str3);
-
- std::cout << "String: " << newStr.c_str() << std::endl;
-
- return 0;
-} */
-
-/* int main(int argc, char **argv)
-{
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
+  return 0;
 }
-*/

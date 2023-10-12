@@ -1,6 +1,4 @@
 #include "technikumSTL/string.h"
-
-#include <cstring>
 #define MAX_ITERATIONS 200
 
 namespace technikum
@@ -203,5 +201,89 @@ namespace technikum
   size_t string::size() const
   {
     return len;
+  }
+
+  string::Iterator::Iterator(char* ptr) : current(ptr)
+  {
+  }
+
+  string::Iterator& string::Iterator::operator++()
+  {
+    ++current;
+    return *this;
+  }
+
+  string::Iterator string::Iterator::operator++(int)
+  {
+    Iterator temp = *this;
+    ++current;
+    return temp;
+  }
+
+  char& string::Iterator::operator*()
+  {
+    return *current;
+  }
+
+  bool string::Iterator::operator==(const Iterator& other) const
+  {
+    return current == other.current;
+  }
+
+  bool string::Iterator::operator!=(const Iterator& other) const
+  {
+    return current != other.current;
+  }
+
+  string::ConstIterator::ConstIterator(const char* ptr) : current(ptr)
+  {
+  }
+
+  string::ConstIterator& string::ConstIterator::operator++()
+  {
+    ++current;
+    return *this;
+  }
+
+  string::ConstIterator string::ConstIterator::operator++(int)
+  {
+    ConstIterator temp = *this;
+    ++current;
+    return temp;
+  }
+
+  const char& string::ConstIterator::operator*()
+  {
+    return *current;
+  }
+
+  bool string::ConstIterator::operator==(const ConstIterator& other) const
+  {
+    return current == other.current;
+  }
+
+  bool string::ConstIterator::operator!=(const ConstIterator& other) const
+  {
+    return current != other.current;
+  }
+
+  string::Iterator string::begin()
+  {
+    return Iterator(data);
+  }
+
+  string::Iterator string::end()
+  {
+    return Iterator(data + len);
+  }
+
+  string::ConstIterator string::begin() const
+  {
+    return ConstIterator(data);
+  }
+
+  string::ConstIterator string::end() const
+  {
+    return ConstIterator(data + len);
   }
 }  // namespace technikum
