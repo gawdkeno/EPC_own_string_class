@@ -6,8 +6,18 @@
 },
 {
   "directory": "C:/Users/star0/source/repos/EPC_own_string_class/out/build/x64-Debug",
+  "command": "C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1434~1.319\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -IC:\\Users\\star0\\source\\repos\\EPC_own_string_class\\include -IC:\\Users\\star0\\source\\repos\\EPC_own_string_class\\src /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd /W4 /w14242 /w14254 /w14263 /w14265 /w14287 /we4289 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928 /permissive- -std:c++17 /FoCMakeFiles\\string.dir\\src\\UniquePtr.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\star0\\source\\repos\\EPC_own_string_class\\src\\UniquePtr.cpp",
+  "file": "C:\\Users\\star0\\source\\repos\\EPC_own_string_class\\src\\UniquePtr.cpp"
+},
+{
+  "directory": "C:/Users/star0/source/repos/EPC_own_string_class/out/build/x64-Debug",
   "command": "C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1434~1.319\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -IC:\\Users\\star0\\source\\repos\\EPC_own_string_class\\include -external:IC:\\Users\\star0\\source\\repos\\EPC_own_string_class\\out\\build\\x64-Debug\\_deps\\googletest-src\\googletest\\include -external:IC:\\Users\\star0\\source\\repos\\EPC_own_string_class\\out\\build\\x64-Debug\\_deps\\googletest-src\\googletest -external:W0 /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd /W4 /w14242 /w14254 /w14263 /w14265 /w14287 /we4289 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928 /permissive- -std:c++17 /Fotest\\CMakeFiles\\string_test_Tests.dir\\src\\string_test.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\star0\\source\\repos\\EPC_own_string_class\\test\\src\\string_test.cpp",
   "file": "C:\\Users\\star0\\source\\repos\\EPC_own_string_class\\test\\src\\string_test.cpp"
+},
+{
+  "directory": "C:/Users/star0/source/repos/EPC_own_string_class/out/build/x64-Debug",
+  "command": "C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1434~1.319\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -IC:\\Users\\star0\\source\\repos\\EPC_own_string_class\\include -external:IC:\\Users\\star0\\source\\repos\\EPC_own_string_class\\out\\build\\x64-Debug\\_deps\\googletest-src\\googletest\\include -external:IC:\\Users\\star0\\source\\repos\\EPC_own_string_class\\out\\build\\x64-Debug\\_deps\\googletest-src\\googletest -external:W0 /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd /W4 /w14242 /w14254 /w14263 /w14265 /w14287 /we4289 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928 /permissive- -std:c++17 /Fotest\\CMakeFiles\\string_test_Tests.dir\\src\\UniquePtr_test.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\star0\\source\\repos\\EPC_own_string_class\\test\\src\\UniquePtr_test.cpp",
+  "file": "C:\\Users\\star0\\source\\repos\\EPC_own_string_class\\test\\src\\UniquePtr_test.cpp"
 },
 {
   "directory": "C:/Users/star0/source/repos/EPC_own_string_class/out/build/x64-Debug",

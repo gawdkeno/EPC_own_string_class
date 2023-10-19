@@ -12,7 +12,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "lib/gmock.lib"
+			"path" : "lib/gtest.lib"
 		}
 	],
 	"backtrace" : 3,
@@ -30,7 +30,7 @@
 		"files" : 
 		[
 			"out/build/x64-Debug/_deps/googletest-src/googletest/cmake/internal_utils.cmake",
-			"out/build/x64-Debug/_deps/googletest-src/googlemock/CMakeLists.txt"
+			"out/build/x64-Debug/_deps/googletest-src/googletest/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -40,7 +40,7 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 86,
+				"line" : 126,
 				"parent" : 0
 			},
 			{
@@ -58,7 +58,7 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 120,
+				"line" : 166,
 				"parent" : 0
 			},
 			{
@@ -70,7 +70,7 @@
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 75,
+				"line" : 116,
 				"parent" : 0
 			}
 		]
@@ -91,14 +91,6 @@
 			[
 				{
 					"backtrace" : 6,
-					"path" : "C:/Users/star0/source/repos/EPC_own_string_class/out/build/x64-Debug/_deps/googletest-src/googlemock/include"
-				},
-				{
-					"backtrace" : 6,
-					"path" : "C:/Users/star0/source/repos/EPC_own_string_class/out/build/x64-Debug/_deps/googletest-src/googlemock"
-				},
-				{
-					"backtrace" : 6,
 					"path" : "C:/Users/star0/source/repos/EPC_own_string_class/out/build/x64-Debug/_deps/googletest-src/googletest/include"
 				},
 				{
@@ -109,12 +101,11 @@
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		}
 	],
-	"id" : "gmock::@0f7bb11d64f3678238c7",
+	"id" : "gtest::@1ea2dfc0605fe3ab2a3f",
 	"install" : 
 	{
 		"destinations" : 
@@ -126,15 +117,15 @@
 		],
 		"prefix" : 
 		{
-			"path" : "C:/Users/star0/Source/Repos/EPC_own_string_class/out/install/x64-Debug"
+			"path" : "C:/Users/star0/source/repos/EPC_own_string_class/out/install/x64-Debug"
 		}
 	},
-	"name" : "gmock",
-	"nameOnDisk" : "gmock.lib",
+	"name" : "gtest",
+	"nameOnDisk" : "gtest.lib",
 	"paths" : 
 	{
-		"build" : "_deps/googletest-build/googlemock",
-		"source" : "out/build/x64-Debug/_deps/googletest-src/googlemock"
+		"build" : "_deps/googletest-build/googletest",
+		"source" : "out/build/x64-Debug/_deps/googletest-src/googletest"
 	},
 	"sourceGroups" : 
 	[
@@ -142,8 +133,7 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		}
 	],
@@ -153,12 +143,6 @@
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
 			"path" : "out/build/x64-Debug/_deps/googletest-src/googletest/src/gtest-all.cc",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 3,
-			"compileGroupIndex" : 0,
-			"path" : "out/build/x64-Debug/_deps/googletest-src/googlemock/src/gmock-all.cc",
 			"sourceGroupIndex" : 0
 		}
 	],

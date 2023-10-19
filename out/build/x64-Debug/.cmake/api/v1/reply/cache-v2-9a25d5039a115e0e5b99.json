@@ -147,10 +147,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/cl.exe"
 		},
 		{
@@ -791,7 +791,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/star0/Source/Repos/EPC_own_string_class/out/install/x64-Debug"
+			"value" : "C:/Users/star0/source/repos/EPC_own_string_class/out/install/x64-Debug"
 		},
 		{
 			"name" : "CMAKE_INSTALL_RUNSTATEDIR",
@@ -1571,7 +1571,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/star0/Source/Repos/EPC_own_string_class/out/install/x64-Debug"
+			"value" : "C:/Users/star0/source/repos/EPC_own_string_class/out/install/x64-Debug"
 		},
 		{
 			"name" : "_Python_EXECUTABLE",

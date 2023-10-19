@@ -26,7 +26,7 @@ endmacro()
 
 ####################################################################################
 
-set_and_check(string_INCLUDE_DIR "C:/Users/star0/Source/Repos/EPC_own_string_class/out/install/x64-Debug/include")
+set_and_check(string_INCLUDE_DIR "C:/Users/star0/source/repos/EPC_own_string_class/out/install/x64-Debug/include")
 
 include("${CMAKE_CURRENT_LIST_DIR}/stringTargets.cmake")
 

@@ -1,5 +1,5 @@
-libdir=C:/Users/star0/Source/Repos/EPC_own_string_class/out/install/x64-Debug/lib
-includedir=C:/Users/star0/Source/Repos/EPC_own_string_class/out/install/x64-Debug/include
+libdir=C:/Users/star0/source/repos/EPC_own_string_class/out/install/x64-Debug/lib
+includedir=C:/Users/star0/source/repos/EPC_own_string_class/out/install/x64-Debug/include
 
 Name: gmock
 Description: GoogleMock (without main() function)
