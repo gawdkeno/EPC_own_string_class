@@ -95,7 +95,7 @@ else()
     ${PROJECT_NAME}
     ${headers}
     ${sources}
-  )
+   "include/technikumSTL/UniquePtr.h")
 
   if(${PROJECT_NAME}_VERBOSE_OUTPUT)
     verbose_message("Found the following sources:")

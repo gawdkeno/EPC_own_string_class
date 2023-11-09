@@ -34,7 +34,6 @@ namespace technikum
     using Iterator = BasicIterator<char>;
     using ConstIterator = BasicIterator<const char>;
 
-    // Begin and end functions for iterators
     Iterator begin()
     {
       return Iterator(data);

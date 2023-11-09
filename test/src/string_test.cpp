@@ -5,7 +5,7 @@
 
 using namespace technikum;
 
-// Test the default constructor.
+// test default constructor
 TEST(DefaultConstructorTest, DefaultConstructorCreatesEmptyString)
 {
   technikum::string defaultStr;
@@ -13,7 +13,7 @@ TEST(DefaultConstructorTest, DefaultConstructorCreatesEmptyString)
   EXPECT_EQ(defaultStr.c_str(), nullptr);
 }
 
-// Test the copy constructor with an empty string.
+// test copy constructor with empty string
 TEST(CopyConstructorTest, CopyingEmptyString)
 {
   technikum::string emptyStr;
@@ -22,7 +22,7 @@ TEST(CopyConstructorTest, CopyingEmptyString)
   EXPECT_EQ(copiedStr.c_str(), nullptr);
 }
 
-// Test the copy constructor with a non-empty string.
+// test copy constructor with non-empty string
 TEST(CopyConstructorTest, CopyingNonEmptyString)
 {
   const char* initial = "hello";
@@ -32,7 +32,7 @@ TEST(CopyConstructorTest, CopyingNonEmptyString)
   EXPECT_STREQ(copiedStr.c_str(), initial);
 }
 
-// Test the move constructor.
+// test move constructor
 TEST(MoveConstructorTest, MoveConstructorTransfersOwnership)
 {
   const char* initial = "move";
@@ -44,7 +44,7 @@ TEST(MoveConstructorTest, MoveConstructorTransfersOwnership)
   EXPECT_EQ(str.c_str(), nullptr);
 }
 
-// Test the move assignment operator.
+// test move assignment operator
 TEST(MoveAssignmentTest, MoveAssignmentOperator)
 {
   const char* initial = "hello";
@@ -57,7 +57,7 @@ TEST(MoveAssignmentTest, MoveAssignmentOperator)
   EXPECT_EQ(newStr.c_str(), nullptr);
 }
 
-// Test the copy assignment operator for self-assignment.
+// test copy assignment operator for self-assignment
 TEST(SelfAssignmentTest, CopyAssignmentToSelfDoesNotAlterString)
 {
   const char* initial = "test";
@@ -67,7 +67,7 @@ TEST(SelfAssignmentTest, CopyAssignmentToSelfDoesNotAlterString)
   EXPECT_STREQ(str.c_str(), initial);
 }
 
-// Test the addition of strings.
+// test addition of strings
 TEST(OperatorTest, Addition)
 {
   const char* initial = "hello";
@@ -78,7 +78,7 @@ TEST(OperatorTest, Addition)
   EXPECT_STREQ(CharStr.c_str(), "hello world");
 }
 
-// Test the append operator with another string.
+// test append operator with another string
 TEST(OperatorTest, AppendOperatorWithString)
 {
   const char* initial = "hello";
@@ -88,7 +88,7 @@ TEST(OperatorTest, AppendOperatorWithString)
   EXPECT_STREQ(str.c_str(), "hello world");
 }
 
-// Test the append operator with a C-string.
+// test append operator with a C-string
 TEST(OperatorTest, AppendOperatorWithCStr)
 {
   const char* initial = "hello";
@@ -98,7 +98,7 @@ TEST(OperatorTest, AppendOperatorWithCStr)
   EXPECT_STREQ(str.c_str(), "hello world");
 }
 
-// Test the append function with itself.
+// test append function with itself
 TEST(EdgeCasesTest, AppendToItself)
 {
   const char* initial = "hello";
@@ -108,7 +108,7 @@ TEST(EdgeCasesTest, AppendToItself)
   EXPECT_STREQ(str.c_str(), "hellohello");
 }
 
-// Test the null input string.
+// test null input string
 TEST(EdgeCasesTest, NullString)
 {
   technikum::string str(nullptr);
@@ -116,7 +116,7 @@ TEST(EdgeCasesTest, NullString)
   EXPECT_EQ(str.c_str(), nullptr);
 }
 
-// Test concatenation with empty string.
+// test concatenation with empty string
 TEST(ConcatenationTest, ConcatenateEmptyString)
 {
   const char* initial = "hello";
@@ -126,7 +126,7 @@ TEST(ConcatenationTest, ConcatenateEmptyString)
   EXPECT_STREQ(str.c_str(), "hello");
 }
 
-// Test to iterate over string with non-const iterator.
+// test to iterate over string with non-const iterator
 TEST(StringIteratorTest, IterateWithNonConstIterator)
 {
   technikum::string str("Hello");
@@ -140,7 +140,7 @@ TEST(StringIteratorTest, IterateWithNonConstIterator)
   EXPECT_EQ(result, "Hello");
 }
 
-// Test to iterate over string with const iterator.
+// test to iterate over string with const iterator
 TEST(StringIteratorTest, IterateWithConstIterator)
 {
   const technikum::string str("World");
@@ -154,7 +154,7 @@ TEST(StringIteratorTest, IterateWithConstIterator)
   EXPECT_EQ(result, "World");
 }
 
-// Test to modify string using non-const iterator.
+// test to modify string using non-const iterator
 TEST(StringIteratorTest, ModifyWithStringNonConstIterator)
 {
   technikum::string str("Hello");
@@ -166,17 +166,17 @@ TEST(StringIteratorTest, ModifyWithStringNonConstIterator)
   EXPECT_EQ(std::string(str.c_str()), "HELLO");
 }
 
-// Test that const iterator does not allow modification.
+// test that const iterator does not allow modification
 TEST(StringIteratorTest, ConstIteratorPreventsModification)
 {
   const technikum::string str("Hello");
-  // Uncommenting the following lines should cause a compilation error.
+  // uncommenting the following lines should cause a compilation error
    //for (auto it = str.begin(); it != str.end(); ++it) {
-   //  *it = std::toupper(*it); // This should be impossible with a const iterator.
+   //  *it = std::toupper(*it); // this should be impossible with a const iterator
    //}
 }
 
-// Test to use STL algorithm with non-const iterator.
+// test to use STL algorithm with non-const iterator
 TEST(StringIteratorTest, UseSTLAlgorithmWithNonConstIterator)
 {
   technikum::string str("Hello World");
@@ -186,7 +186,7 @@ TEST(StringIteratorTest, UseSTLAlgorithmWithNonConstIterator)
   EXPECT_EQ(*it, 'W');
 }
 
-// Test to use STL algorithm with const iterator.
+// test to use STL algorithm with const iterator
 TEST(StringIteratorTest, UseSTLAlgorithmWithConstIterator)
 {
   const technikum::string str("Hello World");

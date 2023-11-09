@@ -52,7 +52,7 @@ namespace technikum
     other.data = nullptr;
   }
 
-  string& string::operator=(string other)  // Note the pass by value
+  string& string::operator=(string other)
   {
     swap(other);
     return *this;
@@ -60,15 +60,15 @@ namespace technikum
 
   string string::operator+(const string& other) const
   {
-    string result(*this);  // Copy current string
-    result += other;       // Reuse append logic
+    string result(*this); 
+    result += other;      
     return result;
   }
 
   string string::operator+(const char* other) const
   {
-    string result(*this);  // Copy current string
-    result += other;       // Reuse append logic
+    string result(*this); 
+    result += other;      
     return result;
   }
 
