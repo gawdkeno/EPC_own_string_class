@@ -1,6 +1,6 @@
 #include "technikumSTL/string.h"
 
-#include <cstring>
+#include <algorithm>
 #define MAX_ITERATIONS 200
 
 namespace technikum
@@ -44,19 +44,6 @@ namespace technikum
     my_strcpy(data, len + 1, other.data);
   }
 
-  string& string::operator=(const string& other)
-  {
-    if (data)
-    {
-      delete[] data;
-    }
-    len = other.len;
-    data = new char[len + 1];
-    my_strcpy(data, len + 1, other.data);
-
-    return *this;
-  }
-
   string::string(string&& other) noexcept
   {
     len = other.len;
@@ -65,29 +52,24 @@ namespace technikum
     other.data = nullptr;
   }
 
-  string& string::operator=(string&& other) noexcept
+  string& string::operator=(string other)  // Note the pass by value
   {
-    /*if (this == &other) */
-    if (data)
-    {
-      delete[] data;
-    }
-    len = other.len;
-    data = other.data;
-    other.len = 0;
-    other.data = nullptr;
-
+    swap(other);
     return *this;
   }
 
-  string string::operator+(const string& other)
+  string string::operator+(const string& other) const
   {
-    size_t newLen = len + other.len;
-    char* newData = new char[newLen + 1];
-    my_strcpy(newData, newLen + 1, data);
-    my_strcat(newData, newLen + 1, other.data);
+    string result(*this);  // Copy current string
+    result += other;       // Reuse append logic
+    return result;
+  }
 
-    return string(newData);
+  string string::operator+(const char* other) const
+  {
+    string result(*this);  // Copy current string
+    result += other;       // Reuse append logic
+    return result;
   }
 
   string& string::operator+=(const string& other)
@@ -102,16 +84,6 @@ namespace technikum
     len = newLen;
 
     return *this;
-  }
-
-  string string::operator+(const char* other)
-  {
-    size_t newLen = len + my_strlen(other);
-    char* newData = new char[newLen + 1];
-    my_strcpy(newData, newLen + 1, data);
-    my_strcat(newData, newLen + 1, other);
-
-    return string(newData);
   }
 
   string& string::operator+=(const char* other)
@@ -188,6 +160,13 @@ namespace technikum
     delete[] data;
     data = newData;
     len = newLen;
+  }
+
+  void string::swap(string& other) noexcept
+  {
+    using std::swap;
+    swap(data, other.data);
+    swap(len, other.len);
   }
 
   const char* string::c_str() const
