@@ -4,6 +4,8 @@
 [![codecov](https://codecov.io/gh/filipdutescu/modern-cpp-template/branch/master/graph/badge.svg)](https://codecov.io/gh/filipdutescu/modern-cpp-template)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/filipdutescu/modern-cpp-template)](https://github.com/filipdutescu/modern-cpp-template/releases)
 
+# Own implemantation of C++ string class
+
 # Modern C++ Template
 
 A quick C++ template for modern CMake projects, aimed to be an easy to use
