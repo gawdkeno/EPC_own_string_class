@@ -1,9 +1,10 @@
 # ninja log v5
-1258	1499	7212415397578219	lib/Debug/string.lib	5cae26556a730007
+1558	2039	7212488852215990	lib/Debug/string.lib	5cae26556a730007
 55	10477	7169898978874540	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.obj	4c76fb1fe64ff2f3
 10118	11165	7169898985084534	lib/gmock_main.lib	41a6c3436b0e1307
-18	1254	7212415395218224	CMakeFiles/string.dir/src/string.cpp.obj	3d1ee006a9f5e54e
-24	3299	7212454982175987	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	7419f1b8ffef1a6e
+29	1554	7212488847635999	CMakeFiles/string.dir/src/string.cpp.obj	3d1ee006a9f5e54e
+22	3540	7212497638956690	test/CMakeFiles/string_test_Tests.dir/src/UniquePtr_test.cpp.obj	5e57a340a07b868a
+53	4582	7212488877936007	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	7419f1b8ffef1a6e
 142	7490	7169898949054531	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.obj	7c05908a298c7320
 83	7083	7169898944744563	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj	1fc781270ff591fc
 3371	8472	7169898959344567	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj	25b208f4503b6bac
@@ -13,14 +14,5 @@
 6407	13854	7169899013258656	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	635a941f9314f507
 13854	14094	7169899015337210	lib/gtest.lib	b84f56db58e20cdf
 14094	14279	7169899017487205	lib/gtest_main.lib	7c3ef7325e19b7e4
-3304	4165	7212454989406013	test/string_test_Tests.exe	c1e673476d70a5bf
-28	33570	7212480539659296	build.ninja	96ec3e722dd8b809
-23	2895	7212480866268834	test/CMakeFiles/string_test_Tests.dir/src/UniquePtr_test.cpp.obj	5e57a340a07b868a
-2916	4020	7212480875978805	test/string_test_Tests.exe	a1e27c9069e63438
-29	1554	7212488847635999	CMakeFiles/string.dir/src/string.cpp.obj	3d1ee006a9f5e54e
-1558	2039	7212488852215990	lib/Debug/string.lib	5cae26556a730007
-79	4444	7212488876456015	test/CMakeFiles/string_test_Tests.dir/src/UniquePtr_test.cpp.obj	5e57a340a07b868a
-53	4582	7212488877936007	test/CMakeFiles/string_test_Tests.dir/src/string_test.cpp.obj	7419f1b8ffef1a6e
-4588	5685	7212488887345966	test/string_test_Tests.exe	a1e27c9069e63438
-22	3540	7212497638956690	test/CMakeFiles/string_test_Tests.dir/src/UniquePtr_test.cpp.obj	5e57a340a07b868a
 3546	4360	7212497646036662	test/string_test_Tests.exe	a1e27c9069e63438
+28	33570	7212752334486480	build.ninja	96ec3e722dd8b809

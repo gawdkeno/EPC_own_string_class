@@ -7,7 +7,8 @@
 
 // The Deleter is templated with a default Deleter.
 template <typename T, typename Deleter = std::default_delete<T>>
-class UniquePtr {
+class UniquePtr 
+{
 private:
     T* ptr;       
     Deleter deleter; 
@@ -16,21 +17,26 @@ public:
     explicit UniquePtr(T* p = nullptr, Deleter d = Deleter()) noexcept
         : ptr(p), deleter(d) {}
 
-    ~UniquePtr() {
-        if (ptr) {
+    ~UniquePtr() 
+    {
+        if (ptr) 
+        {
             deleter(ptr);
         }
     }
 
     // Move constructor
     UniquePtr(UniquePtr&& other) noexcept
-        : ptr(other.ptr), deleter(std::move(other.deleter)) {
+        : ptr(other.ptr), deleter(std::move(other.deleter)) 
+    {
         other.ptr = nullptr;
     }
 
     // Move assignment operator
-    UniquePtr& operator=(UniquePtr&& other) noexcept {
-        if (this != &other) {
+    UniquePtr& operator=(UniquePtr&& other) noexcept 
+    {
+        if (this != &other) 
+        {
             Reset(other.Release()); // Automatically delete the current object, if any
             deleter = std::move(other.deleter);
         }
@@ -38,35 +44,42 @@ public:
     }
 
     // Dereference operator
-    T& operator*() const {
+    T& operator*() const 
+    {
         return *ptr;
     }
 
     // Member access operator
-    T* operator->() const noexcept {
+    T* operator->() const noexcept 
+    {
         return ptr;
     }
 
     // Boolean conversion operator
-    explicit operator bool() const noexcept {
+    explicit operator bool() const noexcept 
+    {
         return ptr != nullptr;
     }
 
-    T* Release() noexcept {
+    T* Release() noexcept 
+    {
         T* temp = ptr;
         ptr = nullptr;
         return temp;
     }
 
-    void Reset(T* p = nullptr) noexcept {
+    void Reset(T* p = nullptr) noexcept 
+    {
         T* oldPtr = ptr;
         ptr = p; // Update the pointer
-        if (oldPtr) {
+        if (oldPtr) 
+        {
             deleter(oldPtr); // Delete the old object
         }
     }
 
-    void Swap(UniquePtr& other) noexcept {
+    void Swap(UniquePtr& other) noexcept
+    {
         using std::swap;
         swap(ptr, other.ptr);
         swap(deleter, other.deleter);
